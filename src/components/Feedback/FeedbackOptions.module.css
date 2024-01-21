@@ -1,0 +1,33 @@
+.feedback {
+  text-align: center;
+}
+.feedback__title {
+  font-size: 3em;
+  font-weight: 700;
+}
+.feedback_buttons {
+  text-transform: capitalize;
+  color: #FFF;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10%;
+}
+.feedback_buttons:first-child{
+  background-color: green;
+}
+.feedback_buttons:nth-child(2) {
+  background-color: yellow;
+  color: #000;
+}
+.feedback_buttons:last-child {
+  background-color: red;
+}
+.feedback__circle{
+      background-color: aquamarine;
+      width: 120px;
+      height: 120px;
+      border: 6px solid #F34A53;
+      border-radius: 50%;
+      margin: 40px auto 0;
+}
