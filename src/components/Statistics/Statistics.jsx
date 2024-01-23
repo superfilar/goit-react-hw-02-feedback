@@ -1,7 +1,6 @@
 import style from './Statistics.module.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid'
 
 class Statistics extends Component {
   static defaultProps = {
@@ -20,24 +19,24 @@ class Statistics extends Component {
         <ul className={style.statistics__list}>
           {Object.entries(this.props.stat).map(([key, value]) => {
             return (
-              <li className={style.statistics__item} key={nanoid()}>
+              <li className={style.statistics__item} key={key}>
                 <span
                   className={style.statistics__name}
-                  key={nanoid()}
+                  key={key}
                 >
                   {key}:{' '}
                 </span>
-                <span key={nanoid()}>{value}</span>
+                <span key={key}>{value}</span>
               </li>
             );
           })}
-          <li className={style.statistics__item} key={nanoid()}>
-            <span key={nanoid()}>Total: </span>
-            <span key={nanoid()}>{this.props.total}</span>
+          <li className={style.statistics__item}>
+            <span>Total: </span>
+            <span>{this.props.total}</span>
           </li>
-          <li className={style.statistics__item} key={nanoid()}>
-            <span key={nanoid()}>Positive feedback: </span>
-            <span key={nanoid()}>
+          <li className={style.statistics__item}>
+            <span>Positive feedback: </span>
+            <span>
               {this.props.positivePercentage}%
             </span>
           </li>
